@@ -7,3 +7,7 @@ python-dotenv
 langchain_tavily
 langgraph
 langsmith
+pypdf
+pymupdf
+ipykernel
+sentence-transformers

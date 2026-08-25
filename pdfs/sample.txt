@@ -1,0 +1,21 @@
+This is a sample document. LangChain in 2025: The New Architecture That Changed Everything
+
+If you learned LangChain in 2023, forget most of what you know. The framework has been completely rebuilt from the ground up — new package structure, new composition syntax, new agent framework. If you're still importing from langchain.llms or using LLMChain, all of that is deprecated.
+
+In this article, I'll walk you through the new architecture, explain why it changed, and get you set up with a modern development environment. By the end, you'll have a working setup with both OpenAI and Anthropic, ready to build agents.
+
+Why LangChain Needed a Rewrite
+
+In early 2023, LangChain was a single monolithic package. You'd pip install langchain and get everything — models, chains, agents, vector stores, document loaders — all bundled together in one giant package.
+
+This created three major problems:
+
+Dependency hell. Every time one integration updated (say, the OpenAI SDK), the entire LangChain package needed a release. Dependencies conflicted constantly, and a simple pip install upgrade could break your project.
+
+Tight coupling. Swapping from OpenAI to Anthropic meant rewriting chunks of your application. The abstractions leaked — your code was written for a specific provider, not with a general interface.
+
+Import bloat. Even if you only used OpenAI and a simple chain, you were installing packages for dozens of integrations you'd never touch.
+
+The LangChain team recognized these issues and, starting in late 2023, embarked on a complete architectural overhaul.
+
+The New Modular Architecture
