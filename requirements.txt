@@ -11,3 +11,5 @@ pypdf
 pymupdf
 ipykernel
 sentence-transformers
+pinecone
+langchain-pinecone
